@@ -69,6 +69,17 @@ set(tinyxml2_INSTALL_PKGCONFIGDIR "${CMAKE_INSTALL_LIBDIR}/pkgconfig"
 set(tinyxml2_INSTALL_CMAKEDIR "${CMAKE_INSTALL_LIBDIR}/cmake/tinyxml2"
     CACHE STRING "Path to tinyxml2 CMake files")
 
+if (QNX)
+    install(
+        TARGETS xmltest
+        DESTINATION bin/tinyxml2_tests
+    )
+    install(
+        DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/resources
+        DESTINATION bin/tinyxml2_tests
+    )
+endif ()
+
 ## CMake targets and export scripts
 
 install(
