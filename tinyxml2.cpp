@@ -1,4 +1,5 @@
 /*
+Some modifications 2023 by BlackBerry Limited.
 Original code by Lee Thomason (www.grinninglizard.com)
 
 This software is provided 'as-is', without any express or implied
@@ -24,7 +25,7 @@ distribution.
 #include "tinyxml2.h"
 
 #include <new>		// yes, this one new style header, is in the Android SDK.
-#if defined(ANDROID_NDK) || defined(__BORLANDC__) || defined(__QNXNTO__)
+#if defined(ANDROID_NDK) || defined(__BORLANDC__) || defined(__QNX__)
 #   include <stddef.h>
 #   include <stdarg.h>
 #else

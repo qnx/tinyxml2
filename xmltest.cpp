@@ -1,3 +1,4 @@
+// Some modifications 2023 by BlackBerry Limited.
 #if defined( _MSC_VER )
 	#if !defined( _CRT_SECURE_NO_WARNINGS )
 		#define _CRT_SECURE_NO_WARNINGS		// This test file is not intended to be secure.
@@ -51,7 +52,13 @@ bool XMLTest (const char* testString, const char* expected, const char* found, b
 			printf( "%s\n", found );
 		}
 		else {
+#ifdef __QNX__
+			const char* expected_qnx = expected == NULL ? "(null)" : expected;
+			const char* found_qnx = found == NULL ? "(null)" : expected;
+			printf (" %s [%s][%s]\n", testString, expected_qnx, found_qnx);
+#else
 			printf (" %s [%s][%s]\n", testString, expected, found);
+#endif
 		}
 	}
 

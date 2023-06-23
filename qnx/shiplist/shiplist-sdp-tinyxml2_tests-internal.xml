@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiplist>
+	<id>com.qnx.${baselineId}.osr.tinyxml2_tests.internal</id>
+	<name>TinyXML-2 9.0.0 Library Tests</name>
+	<description>TinyXML-2 - C++ XML parser Tests</description>
+	<property key="f.support" value="Custom"/>
+	<property key="f.swtype" value="III"/>
+	<property key="f.engage" value="B"/>
+	<category>OSR</category>
+
+	<property key="com.qnx.internal" value="true"/>
+	<!-- don't generate provides/requires tags for internal packages-->
+	<requires value="suppress-library: autogen"/>
+	<provides value="suppress-library: autogen"/>
+
+	<asset dest="${targetfolder}/[ARCH]/usr/bin/tinyxml2_tests" />
+</shiplist>

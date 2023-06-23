@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiplist>
+	<id>com.qnx.${baselineId}.osr.tinyxml2.internal</id>
+	<name>TinyXML-2 9.0.0 Library</name>
+	<description>TinyXML-2 - C++ XML parser</description>
+	<property key="f.support" value="Custom"/>
+	<property key="f.swtype" value="III"/>
+	<property key="f.engage" value="B"/>
+	<category>OSR</category>
+
+	<property key="com.qnx.internal" value="true"/>
+	<!-- don't generate provides/requires tags for internal packages-->
+	<requires value="suppress-library: autogen"/>
+	<provides value="suppress-library: autogen"/>
+
+	<file name="${targetfolder}/[ARCH]/usr/lib/libtinyxml2.so" />
+	<file name="${targetfolder}/[ARCH]/usr/lib/libtinyxml2.so.9" />
+	<file name="${targetfolder}/[ARCH]/usr/lib/libtinyxml2.so.9.0.0" />
+	<asset dest="${targetfolder}/usr/include/tinyxml2/" />
+</shiplist>
