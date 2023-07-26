@@ -1,4 +1,5 @@
 /*
+Some modifications 2023 by BlackBerry Limited.
 Original code by Lee Thomason (www.grinninglizard.com)
 
 This software is provided 'as-is', without any express or implied
